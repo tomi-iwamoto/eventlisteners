@@ -73,8 +73,10 @@ grandparent.addEventListener('click', function() {
     
 });
 
-parent.addEventListener('click', function() {
+parent.addEventListener('click', function(e) {
 
+    //This stops from all bubbling or capturing phases to occur after this parent
+    e.stopPropagation();
     console.log('parent capture');
     
 }, {capture: true });
