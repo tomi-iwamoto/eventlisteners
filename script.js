@@ -165,11 +165,39 @@ document.addEventListener("click", function (e) {
         console.log("Hello");
 
     }
+
+    //Can target the match by id
+    if (e.target.matches("#newdivtwo")) {
+
+        console.log("I'm the second new div!")
+    }
+
+    //Can target the match by class
+    if (e.target.matches(".newdivclass")) {
+
+        console.log("I'm the first new div!");
+
+    }
+
 })
+
+
+
 
 const newDiv = document.createElement('div');
 newDiv.style.width = "500px";
 newDiv.style.height = "500px";
 newDiv.style.backgroundColor = "blue";
+newDiv.classList.add("newdivclass");
 document.body.append(newDiv);
+
+
+const newDiv2 = document.createElement('div');
+newDiv2.style.width = "500px";
+newDiv2.style.height = "500px";
+newDiv2.style.backgroundColor = "brown";
+newDiv2.id = "newdivtwo";
+document.body.append(newDiv2);
+
+
 
